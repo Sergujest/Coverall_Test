@@ -1,10 +1,20 @@
-name: GitHub Actions Demo
-on: [push]
+name: CI
+on:
+  pull_request:
+  push:
 jobs:
-  Explore-GitHub-Actions:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup JDK
+        uses: actions/setup-java@v2
+        with:
+          distribution: temurin
+          java-version: 8
+      - name: Build and Test
+        run: sbt -v +test
       - name: Run tests
         run: sbt clean coverage test
 
