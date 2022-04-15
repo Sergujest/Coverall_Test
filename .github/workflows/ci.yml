@@ -1,7 +1,9 @@
 - name: Run tests
+  on: [push]
   run: sbt clean coverage test
 
 - name: Upload coverage data to Coveralls
+  on: [push]
   run: sbt coverageReport coveralls
   env:
     COVERALLS_REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
