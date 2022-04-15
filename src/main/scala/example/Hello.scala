@@ -5,4 +5,6 @@ object Hello {
     println("test")
     if ( number < 18) "No beer" else "Beer for you"
   }
+  def unCoveredMethod(number: Int): String =
+    "Did Not Cover"
 }
