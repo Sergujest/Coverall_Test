@@ -1,7 +1,9 @@
 package example
 
-object Hello extends Greeting with App {
-  println(greeting)
+object Hello extends Greeting {
+  def greet(number: Int): String = {
+    if ( number < 18) "No beer" else "Beer for you"
+  }
 }
 
 trait Greeting {
