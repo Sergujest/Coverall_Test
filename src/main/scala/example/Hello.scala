@@ -1,11 +1,8 @@
 package example
 
-object Hello extends Greeting {
+object Hello {
   def greet(number: Int): String = {
+    println("test")
     if ( number < 18) "No beer" else "Beer for you"
   }
-}
-
-trait Greeting {
-  lazy val greeting: String = "hello"
 }
