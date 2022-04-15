@@ -6,10 +6,10 @@ jobs:
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - name: Run tests
-        run: sbt clean
+        run: sbt clean coverage test
 
       - name: Upload coverage data to Coveralls
-        run: sbt test
+        run: sbt coverageReport coveralls
         env:
           COVERALLS_REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           COVERALLS_FLAG_NAME: Scala ${{ matrix.scala }}
