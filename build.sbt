@@ -1,8 +1,8 @@
 import Dependencies._
-import org.scoverage.coveralls.Imports.CoverallsKeys._
+//import org.scoverage.coveralls.Imports.CoverallsKeys._
 
-coverallsToken := Some("LI5CiQmQJb1TKRWZSBncQmO3iBNpkkJ2N")
-coverageEnabled := true
+//coverallsToken := Some("LI5CiQmQJb1TKRWZSBncQmO3iBNpkkJ2N")
+//coverageEnabled := true
 
 
 ThisBuild / scalaVersion     := "2.12.10"
@@ -15,7 +15,7 @@ lazy val root = (project in file("."))
     name := "Coverall_Test",
     libraryDependencies ++= Seq(
       scalaTest % Test,
-
+      "com.typesafe.scala-logging"   %% "scala-logging"                       % "3.8.0",
     )
 
   )
