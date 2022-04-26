@@ -1,5 +1,5 @@
 import Dependencies._
-//import org.scoverage.coveralls.Imports.CoverallsKeys._
+import org.scoverage.coveralls.Imports.CoverallsKeys._
 
 //coverallsToken := Some("LI5CiQmQJb1TKRWZSBncQmO3iBNpkkJ2N")
 //coverageEnabled := true
